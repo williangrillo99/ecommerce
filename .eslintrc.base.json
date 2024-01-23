@@ -6,6 +6,8 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "no-console": ["error"],
+        "@typescript-eslint/no-explicit-any": ["error"],
         "@nx/enforce-module-boundaries": [
           "error",
           {
