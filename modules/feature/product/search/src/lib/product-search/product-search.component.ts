@@ -1,4 +1,4 @@
-import { ProductSearchService, mockProducts } from 'product-data-access';
+import { ProductSearchService } from 'product-data-access';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
