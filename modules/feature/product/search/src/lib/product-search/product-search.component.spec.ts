@@ -19,9 +19,9 @@ describe('ProductSearchComponent', () => {
       providers: [
         {
           provide: ProductSearchService, //QUANDO O COMPONENT OLHAR O SERVICE
-          useValue: { searchByName: () => of(mockProducts) },
+          useValue: { searchByName: () => of(mockProducts) }, //NA VERDADE ELE VAI USAR ESSE VALOR
         },
-      ], //NA VERDADE ELE VAI USAR ESSE VALOR
+      ],
     }).compileComponents();
     productSearchService = TestBed.inject(ProductSearchService);
     fixture = TestBed.createComponent(ProductSearchComponent);
