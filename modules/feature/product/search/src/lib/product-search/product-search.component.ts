@@ -13,6 +13,7 @@ import {
   switchMap,
 } from 'rxjs';
 import { Product } from 'modules/data-access/product/src/lib/models/product.model';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'lib-product-search',
   standalone: true,
@@ -22,6 +23,7 @@ import { Product } from 'modules/data-access/product/src/lib/models/product.mode
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   templateUrl: './product-search.component.html',
   styleUrls: ['./product-search.component.scss'],
