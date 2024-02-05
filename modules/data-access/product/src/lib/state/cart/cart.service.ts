@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map } from 'rxjs';
+import { BehaviorSubject, Observable, map } from 'rxjs';
 import { Product } from '../../models/product.model';
 
 @Injectable({
@@ -15,5 +15,16 @@ export class CartService {
   addToCart(product: Product) {
     const card = this.cartSubject.getValue();
     this.cartSubject.next([...card, product]); //Adiciona na lista
+  }
+
+  getCartList(): Observable<Product[]> {
+    return this.cartSubject.asObservable();
+  }
+
+  removeProduct(product: Product) {
+    const card = this.cartSubject
+      .getValue()
+      .filter((x) => x.name != product.name);
+    this.cartSubject.next(card);
   }
 }

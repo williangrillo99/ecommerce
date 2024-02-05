@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "cart": ["modules/feature/cart/src/index.ts"],
+      "cart-ui": ["modules/ui/cart/src/index.ts"],
       "home": ["modules/feature/home/src/index.ts"],
       "modules/layout": ["modules/feature/layout/src/index.ts"],
       "product-data-access": ["modules/data-access/product/src/index.ts"],
