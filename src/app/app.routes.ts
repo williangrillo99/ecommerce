@@ -25,4 +25,8 @@ export const appRoutes: Route[] = [
     path: 'cart',
     loadChildren: () => import('cart').then((m) => m.cartRoutes),
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('auth-form').then((m) => m.authFormRoutes),
+  },
 ];
