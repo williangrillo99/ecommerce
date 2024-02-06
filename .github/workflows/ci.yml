@@ -2,12 +2,12 @@ name: CI
 on:
   push:
     branches:
-      - origin/master
+      - main
 
   pull_request:
 
 jobs:
-  master:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
