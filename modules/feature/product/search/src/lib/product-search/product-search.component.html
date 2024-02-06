@@ -1,0 +1,22 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Number</mat-label>
+    <input
+      type="text"
+      placeholder="Pick one"
+      aria-label="Digite o produto que voce quer encontrar"
+      matInput
+      [formControl]="control"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let product of products$ | async"
+        [value]="product.name"
+        [routerLink]="['product', product.id]"
+      >
+        {{ product.name }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

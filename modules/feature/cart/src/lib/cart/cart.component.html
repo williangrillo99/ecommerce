@@ -1,0 +1,13 @@
+<main class="cart-list">
+  <section class="cart-list__section">
+    <h2 class="cart-list__title">Produtos no carrinho</h2>
+    @for (item of cart$ | async; track $index) {
+    <lib-cart-list-product
+      (OnRemoveProduct)="removeProduct($event)"
+      [product]="item"
+    ></lib-cart-list-product>
+    } @empty {
+    <h2>Carrinho vazio</h2>
+    }
+  </section>
+</main>
